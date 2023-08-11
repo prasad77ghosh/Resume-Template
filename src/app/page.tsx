@@ -123,6 +123,19 @@ export default function Home() {
             </div>
             <h1 className="text-[1.3rem] font-semibold">Languages</h1>
           </div>
+          <div className="flex gap-2 mt-3 ml-3">
+            {data.languages
+              .toString()
+              .split(",")
+              .map((str, i) => (
+                <p
+                  key={i}
+                  className="bg-green-500 bg-opacity-25 px-2 py-[0.1rem] mt-2 rounded-md"
+                >
+                  {str}
+                </p>
+              ))}
+          </div>
         </div>
       </div>
       <div className="col-span-8 row-span-5 col-start-4 bg-gray-100 rounded-md p-4">
